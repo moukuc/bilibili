@@ -1,0 +1,622 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+html {
+  font-size: 5.2631578947368vw;
+}
+body {
+  font-size: 0.16rem;
+}  
+ul li {
+  list-style: none;
+}        
+.header .head {
+  width: 100%;
+  height: 1.95rem;
+  background-image: url(../images/background_header.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.header .head .menu {
+  width: 100%;
+  height: 0.65rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.20rem;
+  font-weight: 500;
+  color: white;
+}
+.header .head .menu .partition_menu {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-left: 0.2rem;
+}
+.header .head .menu .partition_menu ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.header .head .menu .partition_menu ul svg{
+  font-size: 0.24rem;
+}
+.header .head .menu .partition_menu ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.15rem;
+  height: 0.45rem;
+}
+.header .head .menu .search {
+  width: 6.25rem;
+  height: 0.45rem;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .head .menu .search div {
+  width: 0.65rem;
+  height: 0.45rem;
+  background-color: #e5e5e5;
+  font-size: 0.22rem;
+  font-weight: bold;
+  color: #7e7e7e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .head .menu .search input {
+  width: 5.25rem;
+  height: 0.2rem;
+  border: none;
+  outline: none;
+  margin-left: 0.2rem;
+}
+.header .head .menu .user_menu {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.header .head .menu .user_menu .user {
+  height: 0.45rem;
+  width: 0.45rem;
+  border-radius: 50%;
+  background-color: white;
+}
+.header .head .menu .user_menu ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.header .head .menu .user_menu ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.15rem;
+  height: 0.45rem;
+}
+.header .head .menu .user_menu ul li:nth-of-type(7) {
+  background-color: #fb7299;
+  width: 1.25rem;
+  height: 0.45rem;
+}
+.header .menus {
+  width: 15rem;
+  height: 1rem;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.header .menus .menu_1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 2.2rem;
+  margin-right: 0.2rem;
+}
+.header .menus .menu_1 li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header .menus .menu_1 li>div {
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.3rem;
+  font-weight: bolder;
+}
+.header .menus .menu_1 li:nth-of-type(1)>div {
+  background-color: #ff6684;
+}
+.header .menus .menu_1 li:nth-of-type(2)>div {
+  background-color: rgb(252, 168, 42);
+}
+.header .menus .menu_1 li:nth-of-type(3)>div {
+  background-color: #0087cb;
+}
+.header .menus .menu_1 li:nth-of-type(4)>div {
+  background-color: #5cc172;
+}
+.header .menus .menu_2 {
+  width: 9.5rem;
+  height: 0.6rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  padding-right: 0.1rem;
+  border-left: 0.01rem solid #e8e8e8;
+  border-right: 0.01rem solid #e8e8e8;
+}
+.header .menus .menu_2 li {
+  width: 0.75rem;
+  height: 0.2rem;
+  margin-left: 0.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.header .menus .menu_2 li:nth-of-type(8),
+.header .menus .menu_2 li:nth-of-type(9),
+.header .menus .menu_2 li:nth-of-type(18),
+.header .menus .menu_2 li:nth-of-type(19) {
+  width: 0.95rem;
+}
+.header .menus .menu_2 li:nth-of-type(10),
+.header .menus .menu_2 li:nth-of-type(20) {
+  width: 1.15rem;
+}
+.header .menus .menu_2 li div:nth-of-type(1) {
+  font-size: 0.2rem;
+}
+.header .menus .menu_2 li div:nth-of-type(2) {
+  width: 0.35rem;
+  height: 0.15rem;
+  background-color: rgb(115, 201, 229);
+  border-radius: 0.03rem;
+  font-size: 0.08rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .menus .menu_3 {
+  width: 2.9rem;
+  margin-left: 0.2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  font-size: 0.2rem;
+  height: 0.8rem;
+}
+.header .menus .menu_3 li {
+  margin-right: 0.2rem;
+}
+.header .recommend {
+  width: 15rem;
+  height: 3rem;
+  margin: 0.65rem auto 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .recommend .advertisement {
+  width: 6.9rem;
+  height: 3rem;
+  background-color: blue;
+}
+.header .recommend .vedio {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  flex-wrap: wrap;
+  align-content: space-between;
+  width: 8rem;
+  height: 3rem;
+}
+.header .recommend .vedio div {
+  width: 2.6rem;
+  height: 1.45rem;
+  background-color: #5cc172;
+}
+.body .partition {
+  width: 15rem;
+  margin: 0.5rem auto 0;
+}
+.body .partition.a {
+  height: 3rem;
+}
+.body .partition.b,
+.body .partition.animation
+ {
+  height: 5.7rem;
+}
+.body .partition.cartoon {
+  height: 7.9rem;
+}
+.body .partition .title {
+  font-size: 0.4rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.body .partition .title .update_time {
+  display: none;
+}
+.body .partition.animation .title .update_time {
+  display: block;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.body .partition.animation .title .update_time li {
+  width: 0.36rem;
+  height: 0.3rem;
+  font-size: 0.18rem;
+  margin-left: 0.30rem;
+  box-sizing: border-box;
+}
+.body .partition.animation .title .update_time li.now {
+  color: rgb(0, 161, 214);
+  border-bottom: 1px solid rgb(0, 161, 214);
+}
+.body .partition .title span{
+  font-size: 0.26rem;
+  margin-left: 0.15rem;
+}
+.body .partition .main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.body .partition .vedio {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 0.15rem;
+  width: 10.65rem;
+  overflow: auto;
+}
+.body .partition.a .vedio {
+  height: 2.5rem;
+} 
+.body .partition.b .vedio {
+  height: 5.2rem;
+} 
+.body .partition.animation .vedio {
+  height: 4.2rem;
+  justify-content: start;
+} 
+.body .partition.cartoon .vedio {
+  height: 7.3rem;
+} 
+.body .partition .vedio .box {
+  width: 2.6rem;
+  height: 2.45rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+}
+.body .partition.cartoon .vedio .box {
+  height: 3.65rem;
+}
+.body .partition .vedio .box div:nth-of-type(1) {
+  width: 2.6rem;
+  height: 1.5rem;
+  background-color: #ff6684;
+}
+.body .partition.cartoon .vedio .box div:nth-of-type(1) {
+  height: 2.7rem;
+}
+.body .partition .vedio .box>span{
+  font-size: 0.18rem;
+  width: 2.35rem;
+  height: 0.5rem;
+  margin: 0.1rem 0;
+}
+.body .partition .vedio .box div:nth-of-type(2) {
+  font-size: 0.2rem;
+  height: 0.22rem;
+  color: rgb(153, 153, 153);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 0.30rem;
+  display: none;
+}
+.body .partition .vedio .box div:nth-of-type(2) span {
+  font-size: 0.14rem;
+}
+.body .partition.cartoon .vedio .box div:nth-of-type(2) span {
+  font-size: 0.18rem;
+}
+.body .partition .main .advertisement {
+  width: 4rem;
+  background-color: beige;
+  margin-top: 0.15rem;
+  display: none;
+}
+.body .partition.advertisement .main .advertisement {
+  display: block;
+}
+.body .partition.a .main .advertisement {
+  height: 2.3rem;
+}
+.body .partition.b .main .advertisement {
+  height: 4.15rem;
+}
+.body .partition.up .vedio .box div:nth-of-type(2) {
+  display: block;
+}
+.body .partition .rank {
+  display: none;
+}
+.body .partition.rank .rank {
+  width: 4rem;
+  height: 5.8rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: start;
+  flex-direction: column;
+  transform: translateY(-0.35rem);
+}
+.body .partition.rank .rank .title {
+  font-size: 0.24rem;
+}
+.body .partition.rank .rank .list {
+  width: 4rem;
+  height: 4.15rem;
+}
+.body .partition.rank .rank .list li {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: 0.18rem;
+  margin-top: 0.2rem;
+}
+.body .partition.rank .rank .list li:nth-of-type(1) {
+  align-items: flex-start;
+}
+.body .partition.rank .rank .list li:nth-of-type(1) .img{
+  width: 1.4rem;
+  height: 0.8rem;
+  background-color: aqua;
+  border-radius: 0.03rem;
+}
+.body .partition.rank.cartoon .rank .list li:nth-of-type(1) .img {
+  height: 1.9rem;
+}
+.body .partition.rank .rank .list li:nth-of-type(1) .describe {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+  margin-left: 0.2rem;
+}
+.body .partition.rank .rank .list li:nth-of-type(1) .describe .name {
+  width: 2rem;
+  height: 0.5rem;
+  overflow: hidden;
+  font-size: 0.18rem;
+}
+.body .partition.rank .rank .list li:nth-of-type(1) .describe .score,
+.body .partition.rank .rank .list li:nth-of-type(1) .describe .type,
+.body .partition.rank .rank .list li:nth-of-type(1) .describe .update
+ {
+  width: 2rem;
+  height: 0.18rem;
+  font-size: 0.16rem;
+  color: rgb(153, 153, 153);
+}
+.body .partition.rank .rank .list li:nth-of-type(1) .describe .type,
+.body .partition.rank .rank .list li:nth-of-type(1) .describe .update {
+  margin-top: 0.15rem;
+}
+.body .partition.rank .rank .list li .ranking {
+  width: 0.25rem;
+  height: 0.25rem;
+  border-radius: 0.03rem;
+  color: rgb(183, 183, 183);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0.16rem;
+}
+.body .partition.rank.cartoon .rank .list li div:nth-of-type(2){
+  width: 3.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.body .partition.rank.cartoon .rank .list li div:nth-of-type(2) span:nth-of-type(2) {
+  width: 2rem;
+  height: 0.18rem;
+  font-size: 0.16rem;
+  color: rgb(153, 153, 153);
+  line-height: 0.16rem;
+}
+.body .partition.rank .rank .list li:nth-of-type(1) .ranking,
+.body .partition.rank .rank .list li:nth-of-type(2) .ranking,
+.body .partition.rank .rank .list li:nth-of-type(3) .ranking {
+  background-color: rgb(0, 161, 214);
+  color: white;
+}
+.body .partition.animation .vedio .box {
+  width: 2.85rem;
+  height: 0.9rem;
+  margin: 0 0.4rem 0.3rem 0;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: row;
+}
+.body .partition.animation .vedio .box .image {
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 0.03rem;
+}
+.body .partition.animation .vedio .box .describe {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 0.8rem;
+  width: 1.7rem;
+  margin-left: 0.16rem;
+  margin-bottom: 0;
+}
+.body .partition.animation .vedio .box .name {
+  width: 1.8rem;
+  height: 0.5rem;
+  color: black;
+  font-size: 0.18rem;
+}
+.body .partition.animation .vedio .box .update {
+  height: 0.16rem;
+  font-size: 0.16rem;
+  line-height: 0.16rem;
+  width: 1.5rem;
+  color: rgb(0, 161, 214);
+  margin-top: 0.15rem;
+}
+.body .partition.essay .article {
+  margin-top: 0.15rem;
+  height: 5rem;
+  width: 10.7rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.body .partition.essay .article .box {
+  width: 5rem;
+  height: 1.15rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.body .partition.essay .article .box .image {
+  width: 1.5rem;
+  height: 1.2rem;
+  background-color: cornflowerblue;
+}
+.body .partition.essay .article .box .describe {
+  width: 3.3rem;
+  height: 1.2rem;
+  margin-left: 0.15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: 0.2rem;
+}
+.body .partition.essay .article .box .describe>span {
+  height: 0.5rem;
+}
+.body .partition.essay .article .box .describe div {
+  font-size: 0.16rem;
+  color: rgb(183, 183, 183);
+}
+.footer {
+  height: 6.4rem;
+  width: 100%;
+  background-color: rgb(246, 249, 250);
+}
+.footer .menu {
+  height: 2.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.footer .menu>div {
+  margin-top: 0.4rem;
+  height: 1.9rem;
+}
+.footer .menu>div:nth-of-type(1) {
+  width: 4.5rem;
+}
+.footer .menu>div:nth-of-type(2) {
+  width: 7rem;
+  box-sizing: border-box;
+  border-right: 1px solid rgb(238, 238, 238);
+  border-left: 1px solid rgb(238, 238, 238);
+  padding-left: 0.5rem;
+}
+.footer .menu>div:nth-of-type(3) {
+  width: 4rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: 0.6rem;
+}
+.footer .menu>div:nth-of-type(3) div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 0.4rem;
+  height: 1.1rem;
+  width: 0.9rem;
+}
+.footer .menu>div:nth-of-type(3) span {
+  font-size: 0.2rem;
+  margin-top: 0.2rem;
+}
+.footer .menu .title {
+  font-size: 0.2rem;
+  color: rgb(153, 153, 153);
+  margin-bottom: 0.25rem;
+}
+.footer .menu ul {
+  height: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.footer .menu ul li {
+  width: 1.9rem;
+  height: 0.2rem;
+  font-size: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+.footer>.others {
+  width: 15.2rem;
+  height: 2.7rem;
+  margin: 0.5rem auto 0;
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+}
+.footer>.others .image {
+  height: 2.2rem;
+  width: 1.3rem;
+  background-image: url(../images/footer_others.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.footer>.others .others div {
+  color: rgb(153, 153, 153);
+  margin-left: 0.4rem;
+  margin-top: 0.15rem;
+}
