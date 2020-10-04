@@ -202,6 +202,13 @@
       "unicode_decimal": 58900
     },
     {
+      "icon_id": "6918480",
+      "name": "交换",
+      "font_class": "jiaohuan",
+      "unicode": "e647",
+      "unicode_decimal": 58951
+    },
+    {
       "icon_id": "7466521",
       "name": "天平，公平，平衡",
       "font_class": "huabanfuben",
