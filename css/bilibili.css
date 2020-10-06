@@ -79,6 +79,7 @@ ul li {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 .header .head .menu .search div {
   width: 0.65rem;
@@ -100,6 +101,40 @@ ul li {
 }
 .header .head .menu .search input::placeholder {
   font-size: 0.18rem;
+}
+.header .head .menu .search .search_history {
+  justify-content: start;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  width: 6.25rem;
+  background-color: white;
+  top: 0.46rem;
+  left: 0;
+  z-index: 2;
+  box-sizing: border-box;
+  padding: 0.1rem 0;
+  display: none;
+}
+.header .head .menu .search .search_history li {
+  width: 6.25rem;
+  height: 0.4rem;
+  color: black;
+  box-sizing: border-box;
+  line-height: 0.4rem;
+  padding: 0 0.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .head .menu .search .search_history li svg {
+  color: rgb(153, 153, 153);
+}
+.header .head .menu .search .search_history li svg:hover {
+  color: rgb(115, 201, 229);
+}
+.header .head .menu .search .search_history li:hover {
+  background-color: rgb(244, 244, 244);
 }
 .header .head .menu .user_menu {
   display: flex;
@@ -610,19 +645,27 @@ ul li {
   }
 }
 .header .recommend .advertisement>div:nth-of-type(1) {
-  background-color: aqua;
+  background-image: url(../images/recommend_1.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   transform: rotateZ(0) translateZ(5px);
 }
 .header .recommend .advertisement>div:nth-of-type(2) {
-  background-color: lemonchiffon;
+  background-image: url(../images/recommend_2.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   transform: rotateZ(0);
 }
 .header .recommend .advertisement>div:nth-of-type(3) {
-  background-color: coral;
+  background-image: url(../images/recommend_3.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   transform: rotateZ(0);
 }
 .header .recommend .advertisement>div:nth-of-type(4) {
-  background-color: burlywood;
+  background-image: url(../images/recommend_4.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   transform: rotateZ(0);
 }
 .header .recommend .advertisement div div {
@@ -712,9 +755,38 @@ ul li {
 .header .recommend .vedios>.vedio {
   width: 2.6rem;
   height: 1.45rem;
-  background-color: #5cc172;
   overflow: hidden;
   position: relative;
+}
+.header .recommend .vedios>.vedio:nth-of-type(3) {
+  background-image: url(../images/recommend_vedio_1.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.header .recommend .vedios>.vedio:nth-of-type(4) {
+  background-image: url(../images/recommend_vedio_2.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.header .recommend .vedios>.vedio:nth-of-type(5) {
+  background-image: url(../images/recommend_vedio_3.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.header .recommend .vedios>.vedio:nth-of-type(6) {
+  background-image: url(../images/recommend_vedio_4.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.header .recommend .vedios>.vedio:nth-of-type(7) {
+  background-image: url(../images/recommend_vedio_5.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.header .recommend .vedios>.vedio:nth-of-type(8) {
+  background-image: url(../images/recommend_vedio_6.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 .header .recommend .vedios>.vedio .mask {
   width: 2.6rem;
@@ -743,9 +815,8 @@ ul li {
   text-overflow: ellipsis;
 }
 .header .recommend .vedios>.vedio:hover .mask .title {
-  height: 0.45rem;
+  height: 0.5rem;
   white-space: normal;
-  overflow: visible;
 }
 .header .recommend .vedios>.vedio .mask .up {
   margin-left: 0.1rem;
@@ -879,8 +950,9 @@ ul li {
 .body .partition .vedio .box>span{
   font-size: 0.18rem;
   width: 2.35rem;
-  height: 0.5rem;
+  height: 0.62rem;
   margin: 0.1rem 0;
+  overflow: hidden;
 }
 .body .partition .vedio .box div:nth-of-type(2) {
   font-size: 0.2rem;
@@ -941,6 +1013,12 @@ ul li {
   align-items: center;
   font-size: 0.18rem;
   margin-top: 0.2rem;
+  overflow:hidden; 
+  white-space:nowrap;
+  text-overflow:ellipsis; 
+}
+.body .partition.rank .rank .list li .ranking {
+  flex-shrink: 0;
 }
 .body .partition.rank .rank .list li:nth-of-type(1) {
   align-items: flex-start;
@@ -953,6 +1031,10 @@ ul li {
 }
 .body .partition.rank.cartoon .rank .list li:nth-of-type(1) .img {
   height: 1.9rem;
+  width: 1.4rem;
+}
+.body .partition.cartoon.rank .rank .list li:nth-of-type(1) {
+  height: 1.9rem;
 }
 .body .partition.rank .rank .list li:nth-of-type(1) .describe {
   display: flex;
@@ -960,6 +1042,7 @@ ul li {
   justify-content: start;
   align-items: flex-start;
   margin-left: 0.2rem;
+  width: 2rem;
 }
 .body .partition.rank .rank .list li:nth-of-type(1) .describe .name {
   width: 2rem;
@@ -989,6 +1072,7 @@ ul li {
   justify-content: center;
   align-items: center;
   margin-right: 0.16rem;
+  
 }
 .body .partition.rank.cartoon .rank .list li div:nth-of-type(2){
   width: 3.6rem;
@@ -1085,6 +1169,241 @@ ul li {
   font-size: 0.16rem;
   color: rgb(183, 183, 183);
 }
+.body .partition:nth-of-type(1) .vedio .box:nth-of-type(1) div:nth-of-type(1){
+  background-image: url(../images/tuiguang_1.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.body .partition:nth-of-type(1) .vedio .box:nth-of-type(2) div:nth-of-type(1){
+  background-image: url(../images/tuiguang_2.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.body .partition:nth-of-type(1) .vedio .box:nth-of-type(3) div:nth-of-type(1){
+  background-image: url(../images/tuiguang_3.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.body .partition:nth-of-type(1) .vedio .box:nth-of-type(4) div:nth-of-type(1){
+  background-image: url(../images/tuiguang_4.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.body .partition:nth-of-type(1) .advertisement {
+  background-image: url(../images/tuiguang_advertisement.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.body .partition:nth-of-type(2) .vedio .box:nth-of-type(1) div:nth-of-type(1){
+  background-image: url(../images/zongjuesai_1.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.body .partition:nth-of-type(2) .vedio .box:nth-of-type(2) div:nth-of-type(1){
+  background-image: url(../images/zongjuesai_2.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.body .partition:nth-of-type(2) .vedio .box:nth-of-type(3) div:nth-of-type(1){
+  background-image: url(../images/zongjuesai_3.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.body .partition:nth-of-type(2) .vedio .box:nth-of-type(4) div:nth-of-type(1){
+  background-image: url(../images/zongjuesai_4.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.body .partition:nth-of-type(2) .advertisement {
+  background-image: url(../images/zongjuesai_advertisement.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.body .partition:nth-of-type(3) .vedio .box:nth-of-type(1) div:nth-of-type(1) {
+  background-image: url(../images/zhibo_1.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.body .partition:nth-of-type(3) .vedio .box:nth-of-type(2) div:nth-of-type(1) {
+  background-image: url(../images/zhibo_2.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.body .partition:nth-of-type(3) .vedio .box:nth-of-type(3) div:nth-of-type(1) {
+  background-image: url(../images/zhibo_3.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.body .partition:nth-of-type(3) .vedio .box:nth-of-type(4) div:nth-of-type(1) {
+  background-image: url(../images/zhibo_4.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.body .partition:nth-of-type(3) .vedio .box:nth-of-type(5) div:nth-of-type(1) {
+  background-image: url(../images/zhibo_5.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.body .partition:nth-of-type(3) .vedio .box:nth-of-type(6) div:nth-of-type(1) {
+  background-image: url(../images/zhibo_6.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.body .partition:nth-of-type(3) .vedio .box:nth-of-type(7) div:nth-of-type(1) {
+  background-image: url(../images/zhibo_7.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.body .partition:nth-of-type(3) .vedio .box:nth-of-type(8) div:nth-of-type(1) {
+  background-image: url(../images/zhibo_8.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.body .partition:nth-of-type(3) .advertisement {
+  background-image: url(../images/zhibo_advertisement.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.body .partition:nth-of-type(4) .vedio .box:nth-of-type(1) div:nth-of-type(1) {
+  background-image: url(../images/donghua_1.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.body .partition:nth-of-type(4) .vedio .box:nth-of-type(2) div:nth-of-type(1) {
+  background-image: url(../images/donghua_2.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.body .partition:nth-of-type(4) .vedio .box:nth-of-type(3) div:nth-of-type(1) {
+  background-image: url(../images/donghua_3.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.body .partition:nth-of-type(4) .vedio .box:nth-of-type(4) div:nth-of-type(1) {
+  background-image: url(../images/donghua_4.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.body .partition:nth-of-type(4) .vedio .box:nth-of-type(5) div:nth-of-type(1) {
+  background-image: url(../images/donghua_5.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.body .partition:nth-of-type(4) .vedio .box:nth-of-type(6) div:nth-of-type(1) {
+  background-image: url(../images/donghua_6.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.body .partition:nth-of-type(4) .vedio .box:nth-of-type(7) div:nth-of-type(1) {
+  background-image: url(../images/donghua_7.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.body .partition:nth-of-type(4) .vedio .box:nth-of-type(8) div:nth-of-type(1) {
+  background-image: url(../images/donghua_8.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.body .partition:nth-of-type(4) .rank li:nth-of-type(1) .img {
+  background-image: url(../images/donghua_rank.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.body .partition:nth-of-type(5) .vedio .box:nth-of-type(1) div:nth-of-type(1) {
+  background-image: url(../images/fanjv_1.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.body .partition:nth-of-type(5) .vedio .box:nth-of-type(2) div:nth-of-type(1) {
+  background-image: url(../images/fanjv_2.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.body .partition:nth-of-type(5) .vedio .box:nth-of-type(3) div:nth-of-type(1) {
+  background-image: url(../images/fanjv_3.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.body .partition:nth-of-type(5) .vedio .box:nth-of-type(4) div:nth-of-type(1) {
+  background-image: url(../images/fanjv_4.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.body .partition:nth-of-type(5) .vedio .box:nth-of-type(5) div:nth-of-type(1) {
+  background-image: url(../images/fanjv_5.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.body .partition:nth-of-type(5) .vedio .box:nth-of-type(6) div:nth-of-type(1) {
+  background-image: url(../images/fanjv_6.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.body .partition:nth-of-type(5) .vedio .box:nth-of-type(7) div:nth-of-type(1) {
+  background-image: url(../images/fanjv_7.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.body .partition:nth-of-type(5) .vedio .box:nth-of-type(8) div:nth-of-type(1) {
+  background-image: url(../images/fanjv_8.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.body .partition:nth-of-type(5) .vedio .box:nth-of-type(9) div:nth-of-type(1) {
+  background-image: url(../images/fanjv_9.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.body .partition:nth-of-type(5) .vedio .box:nth-of-type(10) div:nth-of-type(1) {
+  background-image: url(../images/fanjv_10.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.body .partition:nth-of-type(5) .vedio .box:nth-of-type(11) div:nth-of-type(1) {
+  background-image: url(../images/fanjv_11.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.body .partition:nth-of-type(5) .vedio .box:nth-of-type(12) div:nth-of-type(1) {
+  background-image: url(../images/fanjv_12.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.body .partition:nth-of-type(5) .vedio .box:nth-of-type(13) div:nth-of-type(1) {
+  background-image: url(../images/fanjv_13.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.body .partition:nth-of-type(5) .vedio .box:nth-of-type(14) div:nth-of-type(1) {
+  background-image: url(../images/fanjv_14.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.body .partition:nth-of-type(5) .vedio .box:nth-of-type(15) div:nth-of-type(1) {
+  background-image: url(../images/fanjv_15.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.body .partition:nth-of-type(5) .vedio .box:nth-of-type(16) div:nth-of-type(1) {
+  background-image: url(../images/fanjv_16.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.body .partition:nth-of-type(5) .rank li:nth-of-type(1) .img {
+  background-image: url(../images/fanjv_rank.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+
+
+
+
+
+
+
+
+
 .body .slider {
   position: absolute;
   margin-top: 3.3rem;

@@ -48,6 +48,13 @@
       "unicode_decimal": 59036
     },
     {
+      "icon_id": "2104880",
+      "name": "删除筛选项",
+      "font_class": "chushaixuanxiang",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    },
+    {
       "icon_id": "2151781",
       "name": "舞蹈",
       "font_class": "wudao",
