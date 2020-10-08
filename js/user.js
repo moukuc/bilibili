@@ -32,9 +32,17 @@ function handleMessageClick(event) {
       }
       if(operations.getElementsByClassName('forward')[0].contains(target) == true) {
         let forward = messages[i].getElementsByClassName('forward')[2];
+        let comment = null;
+        if(messages[i].className.indexOf('vedio') != -1) {
+          comment = messages[i].getElementsByClassName('comment')[2];
+        }
+        else {
+          comment = messages[i].getElementsByClassName('comment')[1];
+        }
         if(operations.getElementsByClassName('forward')[0].style.color != 'rgb(251, 114, 153)') {
-          
           forward.style.display = 'block';
+          comment.style.display = 'none';
+          operations.getElementsByClassName('comment')[0].style.color = '';
           operations.getElementsByClassName('forward')[0].style.color = 'rgb(251, 114, 153)';
         }
         else {
@@ -44,6 +52,7 @@ function handleMessageClick(event) {
       }
       if(operations.getElementsByClassName('comment')[0].contains(target) == true) {
         let comment = null;
+        let forward = messages[i].getElementsByClassName('forward')[2];
         if(messages[i].className.indexOf('vedio') != -1) {
           comment = messages[i].getElementsByClassName('comment')[2];
         }
@@ -54,6 +63,8 @@ function handleMessageClick(event) {
         if(operations.getElementsByClassName('comment')[0].style.color != 'rgb(251, 114, 153)') {
           
           comment.style.display = 'block';
+          forward.style.display = 'none';
+          operations.getElementsByClassName('forward')[0].style.color = '';
           operations.getElementsByClassName('comment')[0].style.color = 'rgb(251, 114, 153)';
         }
         else {

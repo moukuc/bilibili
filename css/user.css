@@ -1131,6 +1131,7 @@ ul li {
   left: 0;
   bottom: -0.01rem;
   transition: 0s;
+  transform: translateX(0.45rem);
 }
 .main .messages .message .content .operations~.comment .box {
   width: 7.3rem;
