@@ -1,7 +1,85 @@
 
+//基本的评论和转发功能
+const message = document.getElementsByClassName('messages')[0];
+message.addEventListener('click', handleMessageClick);
+function handleMessageClick(event) {
+  const messages = document.getElementsByClassName('message');
+  let target = event.target;
+  for(let i = 0; i < messages.length; i++) {
+    if(messages[i].contains(target) == true) {
+      let operations = messages[i].getElementsByClassName('operations')[0];
+      if(messages[i].className.indexOf('image') != -1) {
+        if(messages[i].getElementsByClassName('images')[0].contains(target) == true) {
+          let image = messages[i].getElementsByClassName('images')[0];
+          image.style.width = pxToRem(image.offsetWidth) > 4 ? '2.7rem' : '5.7rem'
+        }
+      }
+      if(operations.getElementsByClassName('like')[0].contains(target) == true) {
+        let like = messages[i].getElementsByClassName('like')[0];
+        let text = like.getElementsByTagName('span')[0];
+        if(like.style.color != 'rgb(251, 114, 153)') {
+          like.style.color = 'rgb(251, 114, 153)';
+          if(text.innerHTML - 1 >= 0) {
+            text.innerHTML = text.innerHTML - 1 + 2;
+          }
+        }
+        else {
+          like.style.color = '';
+          if(text.innerHTML - 1 >= 0) {
+            text.innerHTML = text.innerHTML - 1;
+          }
+        }
+      }
+      if(operations.getElementsByClassName('forward')[0].contains(target) == true) {
+        let forward = messages[i].getElementsByClassName('forward')[2];
+        if(operations.getElementsByClassName('forward')[0].style.color != 'rgb(251, 114, 153)') {
+          
+          forward.style.display = 'block';
+          operations.getElementsByClassName('forward')[0].style.color = 'rgb(251, 114, 153)';
+        }
+        else {
+          forward.style.display = 'none';
+          operations.getElementsByClassName('forward')[0].style.color = '';
+        }
+      }
+      if(operations.getElementsByClassName('comment')[0].contains(target) == true) {
+        let comment = null;
+        if(messages[i].className.indexOf('vedio') != -1) {
+          comment = messages[i].getElementsByClassName('comment')[2];
+        }
+        else {
+          comment = messages[i].getElementsByClassName('comment')[1];
+        }
+        console.log(comment)
+        if(operations.getElementsByClassName('comment')[0].style.color != 'rgb(251, 114, 153)') {
+          
+          comment.style.display = 'block';
+          operations.getElementsByClassName('comment')[0].style.color = 'rgb(251, 114, 153)';
+        }
+        else {
+          comment.style.display = 'none';
+          operations.getElementsByClassName('comment')[0].style.color = '';
+        }
+      }
+    }
+  }
+}
 
 
+//话题栏的position:sticky效果
+const topic = document.getElementsByClassName('topic_2')[0];
+window.addEventListener('scroll', handleTopicScroll);
+function handleTopicScroll() {
+  let scrollHeight = pxToRem(document.body.scrollTop == 0 ? document.documentElement.scrollTop : document.body.scrollTop);
+  if(scrollHeight <= 2.7) {
+    topic.style.top = '2.7rem'
+  }
+  else {
+    topic.style.top = scrollHeight + 'rem'
+  }
+}
 
+//发表动态的文本框高度控制
 const publish = document.getElementsByClassName('publish')[0];
 const publishInput = publish.getElementsByClassName('text_input')[0];
 const lineHeight = 0.25

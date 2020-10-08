@@ -38,17 +38,15 @@ ul li {
 
 .background {
   width: 18.75rem;
-  height: 11.55rem;
+  height: 13.55rem;
   background-image: url(../images/user_bgi.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   position: fixed;
   z-index: -10;
 }
-
-
 .menu {
-  width: 100%;
+  width: 18.75rem;
   height: 0.65rem;
   display: flex;
   justify-content: space-between;
@@ -80,7 +78,7 @@ ul li {
   height: 0.45rem;
 }
 .menu .partition_menu ul li:nth-of-type(1) svg {
-  font-size: 0.6rem;
+  font-size: 0.4rem;
   flex-shrink: 0;
   margin-right: 0.15rem;
   color: rgb(0, 161, 214)
@@ -178,6 +176,11 @@ ul li {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   transition: 0.2s;
+  overflow: hidden;
+}
+.menu .user_menu .user .img a div {
+  width: 0.45rem;
+  height: 0.45rem;
 }
 .menu .user_menu .user .img:hover,
 .menu .user_menu .user .hover:hover~.img {
@@ -199,6 +202,7 @@ ul li {
   justify-content: start;
   align-items: center;
   flex-direction: column;
+  box-shadow: 0 0 0.01rem 0.01rem rgb(156, 165, 173);
 }
 .menu .user_menu .user.vip .user_data .resource span {
   font-size: 0.2rem;
@@ -309,6 +313,7 @@ ul li {
   align-items: flex-start;
   flex-direction: column;
   height: 3.3rem;
+  width: 100%;
 }
 .menu .user_menu .user .user_data .menu div {
   color: rgb(153, 153, 153);
@@ -382,6 +387,7 @@ ul li {
   color: white;
 }
 .main {
+  width: 18.75rem;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -445,7 +451,7 @@ ul li {
   color: rgb(153, 153, 153);
   margin-top: 0.2rem;
 }
-.main .message {
+.main .messages {
   width: 7.7rem;
   margin: 0 0.1rem;
 }
@@ -476,10 +482,11 @@ ul li {
 .main .topics .topic_2 {
   width: 3.4rem;
   height: 3.45rem;
-  position: fixed;
   background-color: white;
   border-radius: 0.1rem;
   margin-top: 0.1rem;
+  position: absolute;
+  top: 2.7rem;
 }
 .main .topics .topic_2 .title {
   width: 3.4rem;
@@ -525,7 +532,7 @@ ul li {
 .main .topics .topic_2 .topics li span:hover {
   color: rgb(115, 201, 229);
 }
-.main .message .publish {
+.main .messages .publish {
   background-color: white;
   border-radius: 0.1rem;
   padding: 0.25rem 0;
@@ -726,4 +733,539 @@ ul li {
 }
 .main .filter input:nth-of-type(4):checked~label:nth-of-type(4) {
   color: rgb(0, 161, 214);
+}
+.main .messages .message {
+  background-color: white;
+  border-radius: 0.1rem;
+  margin-top: 0.1rem;
+  padding-top: 0.3rem;
+  padding-left: 0.3rem;
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  padding-bottom: 0.15rem;
+}
+.main .messages .message:last-child {
+  margin-bottom: 3rem;
+}
+.main .messages .message .user {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  margin-right: 0.1rem;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.main .messages .message .user img{
+  width: 0.6rem;
+  height: 0.6rem;
+}
+.main .messages .message .content {
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.main .messages .message .content .user_name {
+  height: 0.3rem;
+  font-size: 0.22rem;
+  margin-top: 0.05rem;
+  color: rgb(251, 114, 153);
+}
+.main .messages .message .content .time {
+  font-size: 0.14rem;
+  color: rgb(183, 183, 183);
+  margin-bottom: 0.15rem;
+}
+.main .messages .message .content .text {
+  font-size: 0.2rem;
+}
+.main .messages .message .content .vedio {
+  width: 6.5rem;
+  height: 1.6rem;
+  border-radius: 0.1rem;
+  box-sizing: border-box;
+  border: 0.01rem solid rgb(204, 208, 215);
+  margin-top: 0.15rem;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  display: none;
+}
+.main .messages .message.vedio .content .vedio {
+  display: flex;
+}
+.main .messages .message .content .vedio .img {
+  width: 2.55rem;
+  height: 1.6rem;
+  border-radius: 0.1rem;
+  position: relative;
+}
+.main .messages .message .content .vedio .img .tag {
+  width: 0.8rem;
+  height: 0.25rem;
+  text-align: center;
+  line-height: 0.25rem;
+  background-color: rgb(251, 114, 153);
+  color: white;
+  position: absolute;
+  top: 0.1rem;
+  right: 0.1rem;
+  font-size: 0.12rem;
+  z-index: 1;
+}
+.main .messages .message .content .vedio .img .mask {
+  width: 2.55rem;
+  height: 1.6rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 0.24rem;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  border-radius: 0.1rem;
+  transition: 0.2s linear;
+}
+.main .messages .message .content .vedio:hover .img .mask {
+  opacity: 1;
+}
+.main .messages .message .content .vedio:hover .title {
+  color: rgb(0, 161, 214);
+}
+.main .messages .message .content .vedio .img .mask span {
+  color: white;
+  font-size: 0.14rem;
+  margin-bottom: 0.1rem;
+  margin-left: 0.15rem;
+}
+.main .messages .message .content .vedio .img .mask svg {
+  margin-bottom: 0.05rem;
+  margin-right: 0.15rem;
+}
+.main .messages .message .content .vedio .img img {
+  width: 2.55rem;
+  height: 1.6rem;
+}
+.main .messages .message .content .vedio .content {
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 3.6rem;
+  height: 1.6rem;
+  margin-left: 0.15rem;
+}
+.main .messages .message .content .vedio .content .title {
+  height: 0.5rem;
+  width: 3.6rem;
+  font-size: 0.2rem;
+  margin-top: 0.1rem;
+}
+.main .messages .message .content .vedio .content .discribe {
+  height: 0.5rem;
+  width: 3.6rem;
+  font-size: 0.14rem;
+  color: rgb(157, 159, 157);
+  margin-top: 0.1rem;
+}
+.main .messages .message .content .vedio .content .state {
+  height: 0.2rem;
+  width: 3.6rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  color: rgb(157, 159, 157);
+  margin-top: 0.1rem;
+}
+.main .messages .message .content .vedio .content .state .comment {
+  margin-left: 0.1rem;
+}
+.main .messages .message .content .images {
+  margin-top: 0.15rem;
+  width: 2.7rem;
+  display: none;
+}
+.main .messages .message.image .content .images {
+  display: block;
+}
+.main .messages .message .content .images img {
+  width: 100%;
+}
+.main .messages .message .content .essay {
+  width: 6.5rem;
+  height: 2.4rem;
+  border-radius: 0.05rem;
+  box-sizing: border-box;
+  border: 0.01rem solid rgb(183, 183, 183);
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 0.15rem;
+  display: none;
+}
+.main .messages .message.essay .content:hover .essay {
+  box-shadow: 0 0.01rem 0.01rem 0 rgb(153, 153, 153);
+}
+.main .messages .message.essay .content:hover .essay .title {
+  color: rgb(115, 201, 229);
+}
+.main .messages .message .content .essay .image {
+  width: 6.5rem;
+  height: 1.5rem;
+  transform: translateX(-0.01rem) translateY(-0.01rem);
+  border-radius: 0;
+}
+.main .messages .message .content .essay .image img {
+  width: 6.5rem;
+  border-radius: 0;
+}
+.main .messages .message .content .essay .title {
+  font-size: 0.22rem;
+  margin-left: 0.2rem;
+  margin-top: 0.1rem;
+  font-weight: 300;
+}
+.main .messages .message .content .essay .into {
+  font-size: 0.14rem;
+  margin-left: 0.2rem;
+  margin-top: 0.15rem;
+  color: rgb(183, 183, 183);
+}
+.main .messages .message.essay .content .essay {
+  display: flex;
+}
+.main .messages .message .content .operations {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-top: 0.2rem;
+}
+.main .messages .message .content .operations div {
+  margin-right: 0.3rem;
+  font-size: 0.2rem;
+  color: rgb(157, 159, 157);
+}
+.main .messages .message .content .operations div:hover {
+  color: rgb(255, 174, 201);
+}
+.main .messages .message .content .operations div span {
+  font-size: 0.16rem;
+}
+.main .messages .message .content .operations~.forward {
+  width: 6.5rem;
+  margin-top: 0.25rem;
+  display: none;
+}
+.main .messages .message .content .operations~.forward .box {
+  margin-bottom: 0.2rem;
+}
+.main .messages .message .content .operations~.forward .box .image {
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background-image: url(../images/user.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin-right: 0.1rem;
+}
+.main .messages .message .content .operations~.forward .box textarea {
+  width: 5.95rem;
+  height: 0.7rem;
+  box-sizing: border-box;
+  padding: 0.07rem;
+  resize: none;
+  outline: none;
+  border: 0.01rem solid rgb(153, 153, 153);
+  border-radius: 0.1rem;
+}
+.main .messages .message .content .operations~.forward .box textarea:hover {
+  border: 0.01rem solid rgb(115, 201, 229);
+}
+.main .messages .message .content .operations~.forward .box textarea:focus {
+  border: 0.01rem solid rgb(115, 201, 229);
+}
+.main .messages .message .content .operations~.forward .box textarea::placeholder {
+  font-size: 0.14rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.main .messages .message .content .operations~.forward .box .image,
+.main .messages .message .content .operations~.forward .box textarea  {
+  float: left;
+}
+.main .messages .message .content .operations~.forward .box .operation {
+  width: 6.5rem;
+  height: 0.35rem;
+  clear: both;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main .messages .message .content .operations~.forward .box .operation .smile {
+  width: 0.8rem;
+  height: 0.35rem;
+  border-radius: 0.1rem;
+  box-sizing: border-box;
+  border: 0.01rem solid rgb(183, 183, 183);
+  margin-top: 0.1rem;
+  margin-left: 0.5rem;
+  color: rgb(157, 159, 157);
+  font-size: 0.24rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .messages .message .content .operations~.forward .box .operation .smile span {
+  font-size: 0.16rem;
+  margin-left: 0.05rem;
+}
+.main .messages .message .content .operations~.forward .box .operation .submit {
+  width: 0.7rem;
+  height: 00.35rem;
+  border-radius: 0.1rem;
+  background-color: rgb(0, 161, 214);
+  color: white;
+  margin-top: 0.1rem;
+  margin-right: 0.02rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .messages .message .content .operations~.forward .forward_list {
+  width: 6.5rem;
+}
+.main .messages .message .content .operations~.forward .forward_list li {
+  width: 6rem;
+  height: 1.15rem;
+  margin-left: 0.5rem;
+  border-top: 0.01rem solid rgb(157, 159, 157);
+  border-radius: 0;
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+}
+.main .messages .message .content .operations~.forward .forward_list li .image {
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  margin-top: 0.15rem;
+  background-image: url(../images/concern_1_4.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.main .messages .message .content .operations~.forward .forward_list li:nth-of-type(2) .image {
+  background-image: url(../images/user.jpg);
+}
+.main .messages .message .content .operations~.forward .forward_list li .box {
+  display: flex;
+  align-items: flex-start;
+  justify-self: start;
+  flex-direction: column;
+  margin-left: 0.1rem;
+}
+.main .messages .message .content .operations~.forward .forward_list li .box .user_name {
+  color: rgb(143, 149, 153);
+  font-size: 0.16rem;
+  margin-top: 0.15rem;
+  font-weight: bold;
+}
+.main .messages .message .content .operations~.forward .forward_list li .box .value {
+  color:black;
+  font-size: 0.14rem;
+  margin-top: 0.05rem;
+}
+.main .messages .message .content .operations~.forward .forward_list li .box .time {
+  color: rgb(156, 165, 173);
+  font-size: 0.14rem;
+  margin-top: 0.05rem;
+}
+.main .messages .message .content .operations~.comment {
+  width: 7.3rem;
+  margin: 0 auto;
+  transform: translateX(-0.8rem);
+  margin-top: 0.15rem;
+  display: none;
+}
+.main .messages .message .content .operations~.comment .filter {
+  height: 0.35rem;
+  border-bottom: 0.01rem solid rgb(143, 149, 153);
+  border-radius: 0;
+  font-size: 0.18rem;
+  font-weight: bold;
+  position: relative;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.main .messages .message .content .operations~.comment .filter label {
+  color: black;
+  height: 0.35rem;
+}
+.main .messages .message .content .operations~.comment .filter span:nth-of-type(2) {
+  margin-left: 0.15rem;
+}
+.main .messages .message .content .operations~.comment .filter input {
+  display: none;
+}
+.main .messages .message .content .operations~.comment .filter input:nth-of-type(1):checked~.move {
+  transform: translateX(0.45rem);
+}
+.main .messages .message .content .operations~.comment .filter input:nth-of-type(2):checked~.move {
+  transform: translateX(2.18rem);
+}
+.main .messages .message .content .operations~.comment .filter input:nth-of-type(1):checked~span:nth-of-type(1) label {
+  color: rgb(115, 201, 229);
+}
+.main .messages .message .content .operations~.comment .filter input:nth-of-type(2):checked~span:nth-of-type(2) label {
+  color: rgb(115, 201, 229);
+}
+.main .messages .message .content .operations~.comment .filter .move {
+  width: 0.9rem;
+  height: 0.02rem;
+  background-color: rgb(115, 201, 229);
+  position: absolute;
+  left: 0;
+  bottom: -0.01rem;
+  transition: 0s;
+}
+.main .messages .message .content .operations~.comment .box {
+  width: 7.3rem;
+  height: 1.6rem;
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+}
+.main .messages .message .content .operations~.comment .box .img {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background-image: url(../images/user.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin-top: 0.4rem;
+  margin-left: 0.15rem;
+}
+.main .messages .message .content .operations~.comment .box .box {
+  margin-top: 0.3rem;
+  width: 6.25rem;
+  height: 1.55rem;
+  margin-left: 0.3rem;
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.main .messages .message .content .operations~.comment .box .box .comment {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.main .messages .message .content .operations~.comment .box .box .comment textarea {
+  resize: none;
+  width: 5.25rem;
+  height: 0.8rem;
+  outline: none;
+  border: 0.01rem solid rgb(156, 165, 173);
+  padding: 0.05rem 0.1rem;
+  border-radius: 0.1rem;
+  box-sizing: border-box;
+}
+.main .messages .message .content .operations~.comment .box .box .comment textarea:hover {
+  border: 0.01rem solid rgb(115, 201, 229);
+}
+.main .messages .message .content .operations~.comment .box .box .comment textarea:focus {
+  border: 0.01rem solid rgb(115, 201, 229);
+}
+.main .messages .message .content .operations~.comment .box .box .comment .submit {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 0.1rem;
+  background-color: rgb(0, 161, 214);
+  color: white;
+  font-size: 0.2rem;
+  box-sizing: border-box;
+  padding: 0.15rem;
+  padding-left: 0.2rem;
+  margin-left: 0.2rem;
+}
+.main .messages .message .content .operations~.comment .box .box .smile {
+  width: 0.8rem;
+  height: 0.35rem;
+  border-radius: 0.1rem;
+  box-sizing: border-box;
+  border: 0.01rem solid rgb(183, 183, 183);
+  margin-top: 0.1rem;
+  color: rgb(157, 159, 157);
+  font-size: 0.24rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .messages .message .content .operations~.comment .box .box .smile span {
+  font-size: 0.16rem;
+  margin-left: 0.05rem;
+}
+.main .messages .message .content .operations~.comment .comment_list {
+  width: 7.3rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 0.15rem;
+}
+.main .messages .message .content .operations~.comment .comment_list li {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: 1.35rem;
+}
+.main .messages .message .content .operations~.comment .comment_list li .image {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background-color: #fb7299;
+  margin-left: 0.9rem;
+  margin-right: 0.4rem;
+  margin-bottom: 0.3rem;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.main .messages .message .content .operations~.comment .comment_list li:nth-of-type(1) .image {
+  background-image: url(../images/concern_1_4.png);
+}
+.main .messages .message .content .operations~.comment .comment_list li:nth-of-type(2) .image {
+  background-image: url(../images/concern_1_6.png);
+}
+.main .messages .message .content .operations~.comment .comment_list li .box {
+  width: 5.25rem;
+  height: 1.4rem;
+  border-top: 0.01rem solid rgb(156, 165, 173);
+  border-radius: 0;
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.main .messages .message .content .operations~.comment .comment_list li .box .name {
+  font-size: 0.16rem;
+  font-weight: bold;
+  color: rgb(251, 114, 153);
+  margin-top: 0.25rem;
+}
+.main .messages .message .content .operations~.comment .comment_list li .box .value {
+  font-size: 0.18rem;
+  color: black;
+  line-height: 0.18rem;
+  margin-top: 0.1rem;
+  height: 0.36rem;
+}
+.main .messages .message .content .operations~.comment .comment_list li .box .time {
+  font-size: 0.14rem;
+  color: rgb(156, 165, 173);
+  margin-top: 0.1rem;
 }
